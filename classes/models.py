@@ -15,6 +15,7 @@ class Class(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
+    presence = models.BooleanField(default=True)
     sport = models.ForeignKey(Sport, on_delete=models.CASCADE, related_name="classes")
     activity = models.ManyToManyField(Activity, related_name="classes")
     description = models.TextField(blank=True)
