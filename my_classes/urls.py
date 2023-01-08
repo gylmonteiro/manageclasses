@@ -21,7 +21,7 @@ from classes.views import ClassViewSet
 from students.views import StudentViewSet
 
 router = routers.DefaultRouter()
-router.register(r"classes", ClassViewSet, basename="Class")
-router.register(r"students", StudentViewSet, basename="Student")
+router.register(r"aulas", ClassViewSet, basename="Class")
+router.register(r"estudantes", StudentViewSet, basename="Student")
 
 urlpatterns = [path("admin/", admin.site.urls), path("", include(router.urls))]

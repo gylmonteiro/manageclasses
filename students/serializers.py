@@ -4,8 +4,8 @@ from persons.serializers import PersonSerializer
 
 
 class StudentSerializer(ModelSerializer):
-    person = PersonSerializer(read_only=True)
+    person = PersonSerializer()
 
     class Meta:
         model = Student
-        fields = ("person", "is_active")
+        fields = "__all__"
