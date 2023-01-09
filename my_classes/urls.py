@@ -19,9 +19,13 @@ from rest_framework import routers
 from django.conf.urls import include
 from classes.views import ClassViewSet
 from students.views import StudentViewSet
+from sports.views import SportViewSet
+from plans.views import PlanViewSet
 
 router = routers.DefaultRouter()
 router.register(r"aulas", ClassViewSet, basename="Class")
 router.register(r"estudantes", StudentViewSet, basename="Student")
+router.register(r"esportes", SportViewSet, basename="Sport")
+router.register(r"planos", PlanViewSet, basename="Plan")
 
 urlpatterns = [path("admin/", admin.site.urls), path("", include(router.urls))]
