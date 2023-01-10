@@ -6,6 +6,4 @@ from .serializers import ClassSerializer
 
 class ClassViewSet(ModelViewSet):
     queryset = Class.objects.all()
-
-    print(len(list(queryset)))
     serializer_class = ClassSerializer

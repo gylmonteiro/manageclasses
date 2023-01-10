@@ -21,11 +21,13 @@ from classes.views import ClassViewSet
 from students.views import StudentViewSet
 from sports.views import SportViewSet
 from plans.views import PlanViewSet
+from persons.views import PersonViewSet
 
 router = routers.DefaultRouter()
 router.register(r"aulas", ClassViewSet, basename="Class")
 router.register(r"estudantes", StudentViewSet, basename="Student")
 router.register(r"esportes", SportViewSet, basename="Sport")
 router.register(r"planos", PlanViewSet, basename="Plan")
+router.register(r"pessoas", PersonViewSet, basename="Person")
 
 urlpatterns = [path("admin/", admin.site.urls), path("", include(router.urls))]
